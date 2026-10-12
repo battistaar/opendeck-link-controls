@@ -27,7 +27,12 @@ Presets are saved from the Link Control GUI or with `linkctl preset save N [--ca
 
 ## Install
 
-1. Install linkctl with pipx (`pipx install .` in a checkout of insta360_link_control).
+1. Install linkctl with pipx. The plugin needs features that are only on the `integration`
+   branch for now (continuous movement, camera presets, streaming detection):
+
+   ```bash
+   pipx install "git+https://github.com/battistaar/insta360_link_control@integration"
+   ```
 2. Run `./install.sh`. It copies the plugin into `~/.config/opendeck/plugins` and restarts
    OpenDeck. Run it again after changing the plugin.
 3. Drag the actions from the **Link Controls** category onto your keys.
