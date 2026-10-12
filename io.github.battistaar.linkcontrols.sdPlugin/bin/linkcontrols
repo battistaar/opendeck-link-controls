@@ -1,0 +1,11 @@
+#!/bin/sh
+# Start the plugin with the Python interpreter linkctl is installed in, so that
+# `import linkctl` works without installing anything else.
+here="$(cd "$(dirname "$0")/.." && pwd)"
+linkctl="$(command -v linkctl 2>/dev/null || echo "$HOME/.local/bin/linkctl")"
+if [ ! -e "$linkctl" ]; then
+    echo "linkctl not found; install it with pipx first" >&2
+    exit 1
+fi
+python="$(head -n 1 "$(readlink -f "$linkctl")" | sed 's/^#! *//')"
+exec $python "$here/plugin/main.py" "$@"

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><link rel="stylesheet" href="pi.css"><script src="pi.js"></script></head>
+<body>
+  <div class="row"><label for="preset">Preset</label>
+    <input id="preset" type="number" min="1" max="99" step="1" value="1" data-setting="preset"></div>
+  <div class="row"><label for="source">Stored in</label>
+    <select id="source" data-setting="source">
+      <option value="computer">This computer</option><option value="camera">Camera (1–6)</option>
+    </select></div>
+  <p class="hint">Presets are saved from Link Control (Presets tab) or with
+    <code>linkctl preset save N</code> (add <code>--camera</code> for camera slots).</p>
+</body>
+</html>

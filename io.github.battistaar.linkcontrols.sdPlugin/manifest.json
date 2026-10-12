@@ -1,0 +1,58 @@
+{
+  "Name": "Link Controls",
+  "Description": "Pan, tilt, zoom, AI tracking and presets for Insta360 Link webcams, through linkctl.",
+  "Author": "Enrico Battistella",
+  "Version": "0.1.0",
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "6.0" },
+  "CodePathLin": "bin/linkcontrols",
+  "Icon": "icons/plugin",
+  "Category": "Link Controls",
+  "CategoryIcon": "icons/category",
+  "OS": [{ "Platform": "linux" }],
+  "Actions": [
+    {
+      "UUID": "io.github.battistaar.linkcontrols.pantilt",
+      "Name": "Pan / Tilt",
+      "Tooltip": "Move the camera by a step, or continuously while held",
+      "Icon": "icons/pan-up",
+      "PropertyInspectorPath": "pi/pantilt.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "States": [{ "Image": "icons/pan-up" }]
+    },
+    {
+      "UUID": "io.github.battistaar.linkcontrols.zoom",
+      "Name": "Zoom",
+      "Tooltip": "Zoom in or out by a step, or continuously while held",
+      "Icon": "icons/zoom-in",
+      "PropertyInspectorPath": "pi/zoom.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "States": [{ "Image": "icons/zoom-in" }]
+    },
+    {
+      "UUID": "io.github.battistaar.linkcontrols.tracking",
+      "Name": "AI Tracking",
+      "Tooltip": "Turn AI subject tracking on or off",
+      "Icon": "icons/tracking-off",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "DisableAutomaticStates": true,
+      "States": [
+        { "Image": "icons/tracking-off", "Name": "Off" },
+        { "Image": "icons/tracking-on", "Name": "On" }
+      ]
+    },
+    {
+      "UUID": "io.github.battistaar.linkcontrols.preset",
+      "Name": "Preset",
+      "Tooltip": "Move the camera to a saved preset",
+      "Icon": "icons/preset",
+      "PropertyInspectorPath": "pi/preset.html",
+      "Controllers": ["Keypad"],
+      "SupportedInMultiActions": true,
+      "States": [{ "Image": "icons/preset", "TitleAlignment": "bottom" }]
+    }
+  ]
+}

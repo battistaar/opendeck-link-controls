@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><link rel="stylesheet" href="pi.css"><script src="pi.js"></script></head>
+<body>
+  <div class="row"><label for="direction">Direction</label>
+    <select id="direction" data-setting="direction">
+      <option value="in">Zoom in</option><option value="out">Zoom out</option>
+    </select></div>
+  <div class="row"><label for="continuous">Continuous</label>
+    <input id="continuous" type="checkbox" data-setting="continuous"></div>
+  <div class="row" data-show-if="continuous=false"><label for="step">Step (×)</label>
+    <input id="step" type="number" min="0.05" max="3" step="0.05" value="0.25" data-setting="step"></div>
+  <div class="row" data-show-if="continuous=true"><label for="speed">Speed</label>
+    <input id="speed" type="range" min="1" max="10" value="5" data-setting="speed">
+    <output for="speed"></output></div>
+  <p class="hint">Continuous zooms while the key is held; speed 5 is about 0.5× per second.
+    Zoom goes from 1× to 4×.</p>
+</body>
+</html>

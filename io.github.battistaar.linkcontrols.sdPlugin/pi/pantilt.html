@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><link rel="stylesheet" href="pi.css"><script src="pi.js"></script></head>
+<body>
+  <div class="row"><label for="direction">Direction</label>
+    <select id="direction" data-setting="direction">
+      <option value="up">Up</option><option value="down">Down</option>
+      <option value="left">Left</option><option value="right">Right</option>
+    </select></div>
+  <div class="row"><label for="continuous">Continuous</label>
+    <input id="continuous" type="checkbox" data-setting="continuous"></div>
+  <div class="row" data-show-if="continuous=false"><label for="step">Step (degrees)</label>
+    <input id="step" type="number" min="1" max="90" step="1" value="3" data-setting="step"></div>
+  <div class="row" data-show-if="continuous=true"><label for="speed">Speed</label>
+    <input id="speed" type="range" min="1" max="10" value="5" data-setting="speed">
+    <output for="speed"></output></div>
+  <p class="hint">Continuous moves while the key is held. Speed 1 is about 2.5°/s, 10 about 26°/s.
+    The camera only moves while an application is showing its video.</p>
+</body>
+</html>

@@ -1,0 +1,10 @@
+:root { color-scheme: dark; }
+body { margin: 0; padding: 8px 12px; background: #2d2d2d; color: #d8d8d8;
+       font: 13px ui-sans-serif, system-ui, sans-serif; }
+.row { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+.row label:first-child { flex: 0 0 110px; color: #9a9a9a; }
+select, input[type=number] { flex: 1; background: #3d3d3d; color: inherit; border: 1px solid #555;
+                             border-radius: 3px; padding: 4px 6px; font: inherit; }
+input[type=range] { flex: 1; }
+.hint { color: #8a8a8a; font-size: 12px; margin: 10px 0 0; line-height: 1.4; }
+.hidden { display: none; }
