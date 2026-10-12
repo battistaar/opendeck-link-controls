@@ -40,7 +40,9 @@ in OpenDeck's environment for every camera access.
 
 - `tools/make_icons.py` redraws the icons (needs Pillow).
 - `tests/hardware_test.py` runs the plugin against a fake OpenDeck and a real camera. It
-  moves the camera and needs computer preset 1 and camera preset 6 saved:
+  moves the camera and needs computer preset 1 and camera preset 6 saved. Quit OpenDeck first:
+  its own copy of the plugin holds the camera open, which the test would see as an
+  application using it.
 
   ```bash
   "$(head -1 "$(readlink -f "$(command -v linkctl)")" | cut -c3-)" tests/hardware_test.py
