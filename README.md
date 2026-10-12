@@ -28,8 +28,8 @@ Presets are saved from the Link Control GUI or with `linkctl preset save N [--ca
 ## Install
 
 1. Install linkctl with pipx (`pipx install .` in a checkout of insta360_link_control).
-2. Run `./install.sh`. It links the plugin into `~/.config/opendeck/plugins` and restarts
-   OpenDeck.
+2. Run `./install.sh`. It copies the plugin into `~/.config/opendeck/plugins` and restarts
+   OpenDeck. Run it again after changing the plugin.
 3. Drag the actions from the **Link Controls** category onto your keys.
 
 The plugin runs on linkctl's own Python interpreter, found from the `linkctl` command.
